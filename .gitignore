@@ -150,4 +150,7 @@ yarn.lock
 dist-ssr/
 
 # Vite dev server
-vite.config.ts.timestamp-*
+vite.config.ts.timestamp-*output.xml
+log.html
+report.html
+selenium-screenshot-*.png
