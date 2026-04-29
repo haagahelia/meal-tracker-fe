@@ -39,22 +39,34 @@ cd meal-tracker-fe
 
 ## 🐳 Run with Docker (Recommended)
 
-### Start the application:
+### Development Environment
+Start the Vite dev server with hot reloading and live code changes:
 
 ```bash
-docker compose up --build
+docker-compose up dev
 ```
 
-### Open in browser:
+- Builds the development image with cached dependencies for faster rebuilds.
+- Access at: 👉 [http://localhost:5173](http://localhost:5173)
+- Includes volume mounts for source code and polling for file watching (optimized for Windows).
 
-👉 [http://localhost:5173](http://localhost:5173)
+### Production Environment
+Build and run the optimized production app served via Nginx:
 
-### What happens:
+```bash
+docker-compose build prod
+docker-compose up prod
+```
 
-* Docker image is built
-* Dependencies are installed
-* Vite development server starts
-* Hot reload is enabled
+- Builds the app to `dist`, serves with Nginx on port 80.
+- Includes custom `nginx.conf` for SPA routing, gzip compression, and security headers (e.g., CSP, XSS protection).
+- Access at: 👉 [http://localhost](http://localhost)
+
+### What happens in both environments:
+* Docker images are built using multi-stage builds for efficiency.
+* Dependencies are installed with caching for speed.
+* For dev: Vite server starts with hot reload.
+* For prod: Nginx serves the static build with optimized config.
 
 ---
 
@@ -76,7 +88,16 @@ npm run dev
 
 ## 🏗️ Production Build
 
-### Using Docker:
+### Using Docker Compose (Recommended):
+
+```bash
+docker-compose build prod
+docker-compose up prod
+```
+
+- This uses the production stage with Nginx and custom config for secure, performant serving.
+
+### Manual Docker Build (Alternative):
 
 ```bash
 docker build -t meal-tracker .
@@ -102,8 +123,8 @@ docker run -p 80:80 meal-tracker
 ## ✅ Summary
 
 1. Clone repository
-2. Run with Docker: `docker compose up --build`
-3. Open [http://localhost:5173](http://localhost:5173)
+2. For development: `docker-compose up dev` → Open [http://localhost:5173](http://localhost:5173)
+3. For production: `docker-compose build prod && docker-compose up prod` → Open [http://localhost](http://localhost)
 
 ---
 
