@@ -3,13 +3,12 @@ WORKDIR /app
 
 FROM base AS deps
 COPY package*.json ./
-RUN npm install
+RUN --mount=type=cache,target=/root/.npm npm ci
 
 FROM base AS dev
 COPY --from=deps /app/node_modules /app/node_modules
 COPY . .
 EXPOSE 5173
-CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
 
 FROM base AS build
 COPY --from=deps /app/node_modules /app/node_modules
@@ -18,5 +17,6 @@ RUN npm run build
 
 FROM nginx:alpine AS prod
 COPY --from=build /app/dist /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/nginx.conf
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
