@@ -43,3 +43,9 @@ export async function getRecipeDetails(id: number) {
     }),
   };
 }
+
+/*
+Later:
+const response = await fetch("/api/ingredients");
+return response.json();
+*/
