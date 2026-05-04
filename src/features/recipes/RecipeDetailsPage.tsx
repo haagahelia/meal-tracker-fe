@@ -1,58 +1,19 @@
-import { useMemo } from "react";
+import { useEffect, useState, useMemo } from "react";
+import { getRecipeDetails } from "@/data/mealTrackerRepository";
 import { Link, useParams } from "react-router-dom";
 import { Page } from "@/components/ui/Page";
 import { Card } from "@/components/ui/Card";
 
-const recipeMap: Record<
-  string,
-  {
-    name: string;
-    totalWeight: string;
-    portion: string;
-    ingredients: { name: string; amount: string }[];
-  }
-> = {
-  "1": {
-    name: "Blueberry oatmeal",
-    totalWeight: "650 g",
-    portion: "300 g",
-    ingredients: [
-      { name: "Fat-free milk", amount: "2 dl" },
-      { name: "Oat flakes", amount: "55 g" },
-      { name: "Blueberries", amount: "100 g" },
-      { name: "Water", amount: "3 dl" },
-    ],
-  },
-  "2": {
-    name: "Chicken rice bowl",
-    totalWeight: "900 g",
-    portion: "450 g",
-    ingredients: [
-      { name: "Chicken breast", amount: "300 g" },
-      { name: "Rice", amount: "200 g" },
-      { name: "Broccoli", amount: "200 g" },
-      { name: "Soy sauce", amount: "20 g" },
-    ],
-  },
-  "3": {
-    name: "Lentil soup",
-    totalWeight: "1,000 g",
-    portion: "350 g",
-    ingredients: [
-      { name: "Red lentils", amount: "200 g" },
-      { name: "Carrot", amount: "120 g" },
-      { name: "Onion", amount: "80 g" },
-      { name: "Vegetable stock", amount: "600 g" },
-    ],
-  },
-};
+
 
 export function RecipeDetailsPage() {
   const { id } = useParams();
+  const [recipe, setRecipe] = useState<any>();
 
-  const recipe = useMemo(() => {
-    if (!id) return undefined;
-    return recipeMap[id];
+  useEffect(() => {
+    if (!id) return;
+
+    getRecipeDetails(Number(id)).then(setRecipe);
   }, [id]);
 
   if (!recipe) {
@@ -87,13 +48,15 @@ export function RecipeDetailsPage() {
         <Card className="space-y-3">
           <h2 className="text-base font-semibold">Ingredients</h2>
           <ul className="space-y-2 text-sm text-slate-700">
-            {recipe.ingredients.map((ingredient) => (
+            {recipe.ingredients.map((row: any) => (
               <li
-                key={ingredient.name}
+                key={row.ingredient_id}
                 className="flex items-center justify-between rounded-xl bg-slate-50 px-3 py-2"
               >
-                <span>{ingredient.name}</span>
-                <span className="font-medium">{ingredient.amount}</span>
+                <span>{row.ingredient?.name}</span>
+                <span className="font-medium">
+                  {row.amount} {row.ingredient?.unit}
+                </span>
               </li>
             ))}
           </ul>
