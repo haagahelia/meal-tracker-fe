@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState } from "react";
 import { getIngredientById } from "@/data/mealTrackerRepository";
 import type { Ingredient } from "@/domain/mealTrackerTypes";
 import { Link, useParams } from "react-router-dom";
@@ -12,6 +12,7 @@ export function ProductDetailsPage() {
     const { id } = useParams();
     const [product, setProduct] = useState<Ingredient | undefined>();
     const [form, setForm] = useState<Ingredient | undefined>();
+    const [isEditing, setIsEditing] = useState(false);
 
     useEffect(() => {
         if (!id) return;
@@ -36,12 +37,12 @@ export function ProductDetailsPage() {
         );
     }
 
-    const handleChange = (
-        e: React.ChangeEvent<HTMLInputElement>
-    ) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+
         setForm({
             ...form,
-            [e.target.name]: e.target.value,
+            [name]: name === "name" || name === "unit" ? value : Number(value),
         });
     };
 
