@@ -1,15 +1,20 @@
+import { useEffect, useState } from "react";
+import { getIngredients } from "@/data/mealTrackerRepository";
+import type { Ingredient } from "@/domain/mealTrackerTypes";
+
 import { Link } from "react-router-dom";
 import { Page } from "@/components/ui/Page";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 
-const products = [
-  { id: "1", name: "Oat flakes", kcal: 370 },
-  { id: "2", name: "Chicken breast", kcal: 165 },
-  { id: "3", name: "Greek yogurt", kcal: 97 },
-];
+
 
 export function ProductsPage() {
+  const [products, setProducts] = useState<Ingredient[]>([]);
+
+  useEffect(() => {
+    getIngredients().then(setProducts);
+  }, []);
 
   return (
     <Page
@@ -46,16 +51,11 @@ export function ProductsPage() {
       {/* NEW: PRODUCTS LIST */}
       <div className="mt-6 space-y-3">
         {products.map((product) => (
-          <Card
-            key={product.id}
-            className="flex items-center justify-between"
-          >
+          <Card key={product.id} className="flex items-center justify-between">
             <div>
-              <h3 className="text-base font-semibold">
-                {product.name}
-              </h3>
+              <h3 className="text-base font-semibold">{product.name}</h3>
               <p className="text-sm text-slate-600">
-                {product.kcal} kcal / 100g
+                {product.calories_per_100} kcal / 100{product.unit}
               </p>
             </div>
 
