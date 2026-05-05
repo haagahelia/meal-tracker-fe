@@ -155,7 +155,7 @@ log.html
 report.html
 selenium-screenshot-*.png
 
-# Robot Framework / Selenium outputs
+# Robot Framework / Playwright outputs  
 output.xml
 log.html
 report.html
