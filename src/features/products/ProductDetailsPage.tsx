@@ -1,65 +1,27 @@
-import { useMemo, useState } from "react";
+import { useEffect, useState } from "react";
+import { getIngredientById } from "@/data/mealTrackerRepository";
+import type { Ingredient } from "@/domain/mealTrackerTypes";
 import { Link, useParams } from "react-router-dom";
 import { Page } from "@/components/ui/Page";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 
-const productMap: Record<
-    string,
-    {
-        name: string;
-        unit: string;
-        calories_per_100: number;
-        protein_per_100: number;
-        fiber_per_100: number;
-        sugar_per_100: number;
-        fat_per_100: number;
-        salt_per_100: number;
-    }
-> = {
-    "1": {
-        name: "Oat flakes",
-        unit: "g",
-        calories_per_100: 370,
-        protein_per_100: 13,
-        fiber_per_100: 10,
-        sugar_per_100: 1,
-        fat_per_100: 7,
-        salt_per_100: 0.01,
-    },
-    "2": {
-        name: "Chicken breast",
-        unit: "g",
-        calories_per_100: 165,
-        protein_per_100: 31,
-        fiber_per_100: 0,
-        sugar_per_100: 0,
-        fat_per_100: 3.6,
-        salt_per_100: 0.18,
-    },
-    "3": {
-        name: "Greek yogurt",
-        unit: "g",
-        calories_per_100: 97,
-        protein_per_100: 10,
-        fiber_per_100: 0,
-        sugar_per_100: 4,
-        fat_per_100: 5,
-        salt_per_100: 0.1,
-    },
-};
+
 
 export function ProductDetailsPage() {
     const { id } = useParams();
-
-    const product = useMemo(() => {
-        if (!id) return undefined;
-        return productMap[id];
-    }, [id]);
-
+    const [product, setProduct] = useState<Ingredient | undefined>();
+    const [form, setForm] = useState<Ingredient | undefined>();
     const [isEditing, setIsEditing] = useState(false);
-    const [form, setForm] = useState(product);
 
+    useEffect(() => {
+        if (!id) return;
+
+        getIngredientById(Number(id)).then((ingredient) => {
+            setProduct(ingredient);
+            setForm(ingredient);
+        });
+    }, [id]);
     if (!product || !form) {
         return (
             <Page title="Product not found" description="No product matched this route parameter.">
@@ -75,12 +37,12 @@ export function ProductDetailsPage() {
         );
     }
 
-    const handleChange = (
-        e: React.ChangeEvent<HTMLInputElement>
-    ) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+
         setForm({
             ...form,
-            [e.target.name]: e.target.value,
+            [name]: name === "name" || name === "unit" ? value : Number(value),
         });
     };
 

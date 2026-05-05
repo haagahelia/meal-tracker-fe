@@ -1,15 +1,18 @@
+import { useEffect, useState } from "react";
+import { getRecipes } from "@/data/mealTrackerRepository";
+import type { Recipe } from "@/domain/mealTrackerTypes";
 import { Link } from "react-router-dom";
 import { Page } from "@/components/ui/Page";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 
-const recipes = [
-  { id: "1", name: "Blueberry oatmeal", portion: "300 g", kcal: 280 },
-  { id: "2", name: "Chicken rice bowl", portion: "450 g", kcal: 540 },
-  { id: "3", name: "Lentil soup", portion: "350 g", kcal: 320 },
-];
-
 export function RecipesPage() {
+  const [recipes, setRecipes] = useState<Recipe[]>([]);
+
+  useEffect(() => {
+    getRecipes().then(setRecipes);
+  }, []);
+
   return (
     <Page
       title="Recipes"
@@ -25,9 +28,7 @@ export function RecipesPage() {
           <Card key={recipe.id} className="flex items-center justify-between gap-4">
             <div>
               <h2 className="text-base font-semibold">{recipe.name}</h2>
-              <p className="text-sm text-slate-600">
-                Portion: {recipe.portion} · {recipe.kcal} kcal
-              </p>
+              <p className="text-sm text-slate-600">{recipe.description}</p>
             </div>
 
             <Link
