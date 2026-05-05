@@ -150,7 +150,13 @@ yarn.lock
 dist-ssr/
 
 # Vite dev server
-vite.config.ts.timestamp-*output.xml
+vite.config.ts.timestamp-*
+log.html
+report.html
+selenium-screenshot-*.png
+
+# Robot Framework / Playwright outputs  
+output.xml
 log.html
 report.html
 selenium-screenshot-*.png
