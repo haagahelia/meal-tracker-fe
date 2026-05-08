@@ -20,7 +20,7 @@ Home Page Loads
 Navigate To Recipes Page
     Click    role=link[name="Recipes"]
     Wait For Elements State    role=heading[name="Recipes"]    visible    5s
-    Get Text    body    contains    Blueberry oatmeal
+    Get Text    body    contains    Overnight Oats
 
 Open Recipe Details
     Click    role=link[name="Recipes"]
@@ -44,5 +44,45 @@ Navigate To Settings Page
     Get Text    body    contains    Frontend starter notes
 
 App Should Not Show Errors Anywhere
+    Get Text    body    not contains    404
+    Get Text    body    not contains    Error
+
+
+
+Add Meal Button Opens Form
+    Click    role=link[name="Tracker"]
+
+    Click    role=button[name="Add Meal"] >> nth=0
+
+    Get Text    body    contains    Add Meal
+
+Tracker Page Shows Metrics
+    Click    role=link[name="Tracker"]
+    Wait For Elements State    role=heading[name="Tracker"]    visible    5s
+    Get Text    body    contains    Calories
+    Get Text    body    contains    Protein
+    Get Text    body    contains    Fiber
+
+Add Meal Form Shows Fields
+    Click    role=link[name="Tracker"]
+    Click    role=button[name="Add Meal"] >> nth=0
+    Wait For Elements State    role=textbox[name="Meal name"]    visible    5s
+    Wait For Elements State    role=spinbutton[name="Calories"]    visible    5s
+    Get Text    body    contains    Meal name
+    Get Text    body    contains    Calories
+
+Add Meal Cancel Closes Form
+    Click    role=link[name="Tracker"]
+    Click    role=button[name="Add Meal"] >> nth=0
+    Wait For Elements State    text=Meal name    visible    5s
+    Click    text=Cancel
+    Wait For Elements State    text=Meal name    hidden    5s
+    Get Text    body    not contains    Meal name
+
+App Reload Does Not Break UI
+    Click    role=link[name="Tracker"]
+    Wait For Elements State    role=heading[name="Tracker"]    visible    5s
+    Browser.Reload
+    Wait For Elements State    role=heading[name="Tracker"]    visible    10s
     Get Text    body    not contains    404
     Get Text    body    not contains    Error

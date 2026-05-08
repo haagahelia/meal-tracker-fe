@@ -1,0 +1,233 @@
+{"level":30,"time":"2026-05-08T21:19:20.857Z","pid":33132,"hostname":"BhaviKataria","msg":"Listening on 127.0.0.1:61022"}
+{"level":30,"time":"2026-05-08T21:19:21.158Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-05-08T21:19:21.504Z","pid":33132,"hostname":"BhaviKataria","msg":"Adding browser to stack: chromium, version: 147.0.7727.15"}
+{"level":30,"time":"2026-05-08T21:19:21.505Z","pid":33132,"hostname":"BhaviKataria","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2026-05-08T21:19:21.505Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method newBrowser"}
+{"level":30,"time":"2026-05-08T21:19:21.516Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method newContext"}
+{"level":30,"time":"2026-05-08T21:19:21.516Z","pid":33132,"hostname":"BhaviKataria","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2026-05-08T21:19:21.516Z","pid":33132,"hostname":"BhaviKataria","msg":"currentBrowser: {\"_contextStack\":[],\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@36b729be088f8c0672fbc9c78d20b804\"},\"name\":\"chromium\",\"id\":\"browser=9ea1c3a3-810d-463d-b381-5681304ad9d6\",\"headless\":false}"}
+{"level":30,"time":"2026-05-08T21:19:21.517Z","pid":33132,"hostname":"BhaviKataria","msg":"Trace file: "}
+{"level":30,"time":"2026-05-08T21:19:21.541Z","pid":33132,"hostname":"BhaviKataria","msg":"Setting default timeout for context context=3c402cec-95e1-4533-8aef-5cb0ea30b0eb to 10000"}
+{"level":30,"time":"2026-05-08T21:19:21.541Z","pid":33132,"hostname":"BhaviKataria","msg":"Changed active context: context=3c402cec-95e1-4533-8aef-5cb0ea30b0eb"}
+{"level":30,"time":"2026-05-08T21:19:21.541Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method newContext"}
+{"level":30,"time":"2026-05-08T21:19:21.558Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-05-08T21:19:21.559Z","pid":33132,"hostname":"BhaviKataria","msg":"currentBrowser: {\"_contextStack\":[{\"id\":\"context=3c402cec-95e1-4533-8aef-5cb0ea30b0eb\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@80d31fe7c0e0f49a0aee2c1ed2b635d7\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@36b729be088f8c0672fbc9c78d20b804\"},\"name\":\"chromium\",\"id\":\"browser=9ea1c3a3-810d-463d-b381-5681304ad9d6\",\"headless\":false}"}
+{"level":30,"time":"2026-05-08T21:19:22.023Z","pid":33132,"hostname":"BhaviKataria","msg":"Video path: undefined"}
+{"level":30,"time":"2026-05-08T21:19:22.024Z","pid":33132,"hostname":"BhaviKataria","msg":"Changed active page"}
+{"level":30,"time":"2026-05-08T21:19:22.407Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method newPage"}
+{"level":30,"time":"2026-05-08T21:19:22.414Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:22.415Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with role=heading[name=\"Meal Tracker\"] in page."}
+{"level":30,"time":"2026-05-08T21:19:22.525Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:22.532Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:22.536Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:22.557Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:22.561Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:22.568Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:22.571Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:22.577Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method click"}
+{"level":30,"time":"2026-05-08T21:19:22.578Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with role=link[name=\"Recipes\"] in page."}
+{"level":30,"time":"2026-05-08T21:19:22.717Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method click"}
+{"level":30,"time":"2026-05-08T21:19:22.726Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:22.726Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with role=heading[name=\"Recipes\"] in page."}
+{"level":30,"time":"2026-05-08T21:19:22.738Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:22.744Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:22.744Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with body in page."}
+{"level":30,"time":"2026-05-08T21:19:22.801Z","pid":33132,"hostname":"BhaviKataria","msg":"Retrieved text for element body containing Meal Tracker\nRecipes\nProducts\nTracker\nSettings\nRecipes\n\nExample recipe list with dynamic route support.\n\nAdd recipe\nOvernight Oats\n\nOat breakfast with milk and berries.\n\nOpen\nBerry Smoothie\n\nSmoothie with banana, berries and yogurt.\n\nOpen\nChicken Rice Bowl\n\nSimple chicken bowl with rice and broccoli.\n\nOpen\nGreek Salad\n\nFresh salad with feta and olive oil.\n\nOpen\nPasta Spinach Bowl\n\nWarm pasta with spinach, tomato sauce and parmesan.\n\nOpen"}
+{"level":30,"time":"2026-05-08T21:19:22.801Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:22.810Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:22.812Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:22.817Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:22.819Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:22.825Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method click"}
+{"level":30,"time":"2026-05-08T21:19:22.825Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with role=link[name=\"Recipes\"] in page."}
+{"level":30,"time":"2026-05-08T21:19:22.883Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method click"}
+{"level":30,"time":"2026-05-08T21:19:22.890Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:22.890Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with role=heading[name=\"Recipes\"] in page."}
+{"level":30,"time":"2026-05-08T21:19:22.896Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:22.903Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method click"}
+{"level":30,"time":"2026-05-08T21:19:22.904Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with role=link[name=\"Open\"] >> nth=0 in page."}
+{"level":30,"time":"2026-05-08T21:19:22.947Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method click"}
+{"level":30,"time":"2026-05-08T21:19:22.953Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:22.953Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with body in page."}
+{"level":30,"time":"2026-05-08T21:19:22.964Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:22.973Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:22.977Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:22.983Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:22.986Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:22.992Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method click"}
+{"level":30,"time":"2026-05-08T21:19:22.992Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with role=link[name=\"Products\"] in page."}
+{"level":30,"time":"2026-05-08T21:19:23.036Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method click"}
+{"level":30,"time":"2026-05-08T21:19:23.043Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:23.043Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with role=heading[name=\"Products\"] in page."}
+{"level":30,"time":"2026-05-08T21:19:23.081Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:23.088Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:23.088Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with body in page."}
+{"level":30,"time":"2026-05-08T21:19:23.108Z","pid":33132,"hostname":"BhaviKataria","msg":"Retrieved text for element body containing Meal Tracker\nRecipes\nProducts\nTracker\nSettings\nProducts\n\nLater: nutrition values, package prices, origin and sustainability.\n\nCreate Product\nProduct database\n\nConnect backend products here later.\n\nBarcode / label reading\n\nFuture AI or scanner features can start from this page.\n\nFat-free milk\n\n34 kcal / 100ml\n\nOpen\nOat flakes\n\n370 kcal / 100g\n\nOpen\nBlueberries\n\n57 kcal / 100g\n\nOpen\nWater\n\n0 kcal / 100ml\n\nOpen\nBanana\n\n89 kcal / 100g\n\nOpen\nGreek yogurt\n\n97 kcal / 100g\n\nOpen\nPeanut butter\n\n588 kcal / 100g\n\nOpen\nEgg\n\n155 kcal / 100pcs\n\nOpen\nWhole wheat bread\n\n247 kcal / 100g\n\nOpen\nAvocado\n\n160 kcal / 100g\n\nOpen\nChicken breast\n\n165 kcal / 100g\n\nOpen\nRice, cooked\n\n130 kcal / 100g\n\nOpen\nBroccoli\n\n35 kcal / 100g\n\nOpen\nOlive oil\n\n884 kcal / 100ml\n\nOpen\nTomato\n\n18 kcal / 100g\n\nOpen\nCucumber\n\n15 kcal / 100g\n\nOpen\nFeta cheese\n\n265 kcal / 100g\n\nOpen\nLettuce\n\n15 kcal / 100g\n\nOpen\nPasta, cooked\n\n157 kcal / 100g\n\nOpen\nTomato sauce\n\n29 kcal / 100g\n\nOpen\nParmesan\n\n431 kcal / 100g\n\nOpen\nSpinach\n\n23 kcal / 100g\n\nOpen\nApple\n\n52 kcal / 100g\n\nOpen\nAlmonds\n\n579 kcal / 100g\n\nOpen\nHoney\n\n304 kcal / 100g\n\nOpen\nStrawberries\n\n32 kcal / 100g\n\nOpen"}
+{"level":30,"time":"2026-05-08T21:19:23.108Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:23.116Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:23.118Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:23.124Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:23.127Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:23.134Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method click"}
+{"level":30,"time":"2026-05-08T21:19:23.135Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with role=link[name=\"Tracker\"] in page."}
+{"level":30,"time":"2026-05-08T21:19:23.204Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method click"}
+{"level":30,"time":"2026-05-08T21:19:23.212Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:23.212Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with role=heading[name=\"Tracker\"] in page."}
+{"level":30,"time":"2026-05-08T21:19:23.220Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:23.228Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:23.228Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with body in page."}
+{"level":30,"time":"2026-05-08T21:19:23.255Z","pid":33132,"hostname":"BhaviKataria","msg":"Retrieved text for element body containing Meal Tracker\nRecipes\nProducts\nTracker\nSettings\nTracker\n\nSimple daily dashboard placeholder.\n\nAdd Meal\nCalories\n1,420 / 2,100 kcal\nProtein\n82 / 120 g\nFiber\n21 / 30 g\nFat\n43 g\nSugars\n18 g\nBudget\n€5.80 / €10.00"}
+{"level":30,"time":"2026-05-08T21:19:23.255Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:23.267Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:23.270Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:23.278Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:23.282Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:23.289Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method click"}
+{"level":30,"time":"2026-05-08T21:19:23.289Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with role=link[name=\"Settings\"] in page."}
+{"level":30,"time":"2026-05-08T21:19:23.349Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method click"}
+{"level":30,"time":"2026-05-08T21:19:23.356Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:23.356Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with role=heading[name=\"Settings\"] in page."}
+{"level":30,"time":"2026-05-08T21:19:23.363Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:23.369Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:23.369Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with body in page."}
+{"level":30,"time":"2026-05-08T21:19:23.391Z","pid":33132,"hostname":"BhaviKataria","msg":"Retrieved text for element body containing Meal Tracker\nRecipes\nProducts\nTracker\nSettings\nSettings\n\nKeep this minimal until real user preferences exist.\n\nFrontend starter notes\n\nAdd environment configuration, API base URL and user preferences here later.\n\nCurrent choices\nVite + React + TypeScript\nReact Router\nTailwind CSS\nDocker Compose dev workflow"}
+{"level":30,"time":"2026-05-08T21:19:23.392Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:23.402Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:23.404Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:23.411Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:23.415Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:23.421Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:23.421Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with body in page."}
+{"level":30,"time":"2026-05-08T21:19:23.444Z","pid":33132,"hostname":"BhaviKataria","msg":"Retrieved text for element body containing Meal Tracker\nRecipes\nProducts\nTracker\nSettings\nSettings\n\nKeep this minimal until real user preferences exist.\n\nFrontend starter notes\n\nAdd environment configuration, API base URL and user preferences here later.\n\nCurrent choices\nVite + React + TypeScript\nReact Router\nTailwind CSS\nDocker Compose dev workflow"}
+{"level":30,"time":"2026-05-08T21:19:23.444Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:23.453Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:23.453Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with body in page."}
+{"level":30,"time":"2026-05-08T21:19:23.474Z","pid":33132,"hostname":"BhaviKataria","msg":"Retrieved text for element body containing Meal Tracker\nRecipes\nProducts\nTracker\nSettings\nSettings\n\nKeep this minimal until real user preferences exist.\n\nFrontend starter notes\n\nAdd environment configuration, API base URL and user preferences here later.\n\nCurrent choices\nVite + React + TypeScript\nReact Router\nTailwind CSS\nDocker Compose dev workflow"}
+{"level":30,"time":"2026-05-08T21:19:23.475Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:23.482Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:23.485Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:23.490Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:23.492Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:23.498Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method click"}
+{"level":30,"time":"2026-05-08T21:19:23.499Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with role=link[name=\"Tracker\"] in page."}
+{"level":30,"time":"2026-05-08T21:19:23.565Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method click"}
+{"level":30,"time":"2026-05-08T21:19:23.571Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method click"}
+{"level":30,"time":"2026-05-08T21:19:23.571Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with role=button[name=\"Add Meal\"] >> nth=0 in page."}
+{"level":30,"time":"2026-05-08T21:19:23.631Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method click"}
+{"level":30,"time":"2026-05-08T21:19:23.637Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:23.638Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with body in page."}
+{"level":30,"time":"2026-05-08T21:19:23.654Z","pid":33132,"hostname":"BhaviKataria","msg":"Retrieved text for element body containing Meal Tracker\nRecipes\nProducts\nTracker\nSettings\nTracker\n\nSimple daily dashboard placeholder.\n\nAdd Meal\nAdd Meal\n\nLog a new meal to your tracker.\n\nMeal name\nCalories\nCancel\nCreate Meal\nCalories\n1,420 / 2,100 kcal\nProtein\n82 / 120 g\nFiber\n21 / 30 g\nFat\n43 g\nSugars\n18 g\nBudget\n€5.80 / €10.00"}
+{"level":30,"time":"2026-05-08T21:19:23.654Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:23.662Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:23.664Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:23.668Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:23.670Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:23.673Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method click"}
+{"level":30,"time":"2026-05-08T21:19:23.673Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with role=link[name=\"Tracker\"] in page."}
+{"level":30,"time":"2026-05-08T21:19:23.722Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method click"}
+{"level":30,"time":"2026-05-08T21:19:23.729Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:23.729Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with role=heading[name=\"Tracker\"] in page."}
+{"level":30,"time":"2026-05-08T21:19:23.735Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:23.742Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:23.742Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with body in page."}
+{"level":30,"time":"2026-05-08T21:19:23.760Z","pid":33132,"hostname":"BhaviKataria","msg":"Retrieved text for element body containing Meal Tracker\nRecipes\nProducts\nTracker\nSettings\nTracker\n\nSimple daily dashboard placeholder.\n\nAdd Meal\nAdd Meal\n\nLog a new meal to your tracker.\n\nMeal name\nCalories\nCancel\nCreate Meal\nCalories\n1,420 / 2,100 kcal\nProtein\n82 / 120 g\nFiber\n21 / 30 g\nFat\n43 g\nSugars\n18 g\nBudget\n€5.80 / €10.00"}
+{"level":30,"time":"2026-05-08T21:19:23.760Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:23.764Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:23.764Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with body in page."}
+{"level":30,"time":"2026-05-08T21:19:23.786Z","pid":33132,"hostname":"BhaviKataria","msg":"Retrieved text for element body containing Meal Tracker\nRecipes\nProducts\nTracker\nSettings\nTracker\n\nSimple daily dashboard placeholder.\n\nAdd Meal\nAdd Meal\n\nLog a new meal to your tracker.\n\nMeal name\nCalories\nCancel\nCreate Meal\nCalories\n1,420 / 2,100 kcal\nProtein\n82 / 120 g\nFiber\n21 / 30 g\nFat\n43 g\nSugars\n18 g\nBudget\n€5.80 / €10.00"}
+{"level":30,"time":"2026-05-08T21:19:23.786Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:23.792Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:23.792Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with body in page."}
+{"level":30,"time":"2026-05-08T21:19:23.816Z","pid":33132,"hostname":"BhaviKataria","msg":"Retrieved text for element body containing Meal Tracker\nRecipes\nProducts\nTracker\nSettings\nTracker\n\nSimple daily dashboard placeholder.\n\nAdd Meal\nAdd Meal\n\nLog a new meal to your tracker.\n\nMeal name\nCalories\nCancel\nCreate Meal\nCalories\n1,420 / 2,100 kcal\nProtein\n82 / 120 g\nFiber\n21 / 30 g\nFat\n43 g\nSugars\n18 g\nBudget\n€5.80 / €10.00"}
+{"level":30,"time":"2026-05-08T21:19:23.816Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:23.827Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:23.829Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:23.835Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:23.838Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:23.845Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method click"}
+{"level":30,"time":"2026-05-08T21:19:23.845Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with role=link[name=\"Tracker\"] in page."}
+{"level":30,"time":"2026-05-08T21:19:23.892Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method click"}
+{"level":30,"time":"2026-05-08T21:19:23.899Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method click"}
+{"level":30,"time":"2026-05-08T21:19:23.899Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with role=button[name=\"Add Meal\"] >> nth=0 in page."}
+{"level":30,"time":"2026-05-08T21:19:23.953Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method click"}
+{"level":30,"time":"2026-05-08T21:19:23.960Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:23.960Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with role=textbox[name=\"Meal name\"] in page."}
+{"level":30,"time":"2026-05-08T21:19:23.967Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:23.974Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:23.974Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with role=spinbutton[name=\"Calories\"] in page."}
+{"level":30,"time":"2026-05-08T21:19:23.980Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:23.988Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:23.988Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with body in page."}
+{"level":30,"time":"2026-05-08T21:19:24.010Z","pid":33132,"hostname":"BhaviKataria","msg":"Retrieved text for element body containing Meal Tracker\nRecipes\nProducts\nTracker\nSettings\nTracker\n\nSimple daily dashboard placeholder.\n\nAdd Meal\nAdd Meal\n\nLog a new meal to your tracker.\n\nMeal name\nCalories\nCancel\nCreate Meal\nCalories\n1,420 / 2,100 kcal\nProtein\n82 / 120 g\nFiber\n21 / 30 g\nFat\n43 g\nSugars\n18 g\nBudget\n€5.80 / €10.00"}
+{"level":30,"time":"2026-05-08T21:19:24.010Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:24.016Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:24.017Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with body in page."}
+{"level":30,"time":"2026-05-08T21:19:24.036Z","pid":33132,"hostname":"BhaviKataria","msg":"Retrieved text for element body containing Meal Tracker\nRecipes\nProducts\nTracker\nSettings\nTracker\n\nSimple daily dashboard placeholder.\n\nAdd Meal\nAdd Meal\n\nLog a new meal to your tracker.\n\nMeal name\nCalories\nCancel\nCreate Meal\nCalories\n1,420 / 2,100 kcal\nProtein\n82 / 120 g\nFiber\n21 / 30 g\nFat\n43 g\nSugars\n18 g\nBudget\n€5.80 / €10.00"}
+{"level":30,"time":"2026-05-08T21:19:24.036Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:24.045Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:24.048Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:24.054Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:24.056Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:24.063Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method click"}
+{"level":30,"time":"2026-05-08T21:19:24.063Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with role=link[name=\"Tracker\"] in page."}
+{"level":30,"time":"2026-05-08T21:19:24.105Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method click"}
+{"level":30,"time":"2026-05-08T21:19:24.112Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method click"}
+{"level":30,"time":"2026-05-08T21:19:24.112Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with role=button[name=\"Add Meal\"] >> nth=0 in page."}
+{"level":30,"time":"2026-05-08T21:19:24.150Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method click"}
+{"level":30,"time":"2026-05-08T21:19:24.158Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:24.158Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with text=Meal name in page."}
+{"level":30,"time":"2026-05-08T21:19:24.165Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:24.171Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method click"}
+{"level":30,"time":"2026-05-08T21:19:24.171Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with text=Cancel in page."}
+{"level":30,"time":"2026-05-08T21:19:24.221Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method click"}
+{"level":30,"time":"2026-05-08T21:19:24.229Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:24.229Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with text=Meal name in page."}
+{"level":30,"time":"2026-05-08T21:19:24.234Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:24.241Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:24.241Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with body in page."}
+{"level":30,"time":"2026-05-08T21:19:24.262Z","pid":33132,"hostname":"BhaviKataria","msg":"Retrieved text for element body containing Meal Tracker\nRecipes\nProducts\nTracker\nSettings\nTracker\n\nSimple daily dashboard placeholder.\n\nAdd Meal\nCalories\n1,420 / 2,100 kcal\nProtein\n82 / 120 g\nFiber\n21 / 30 g\nFat\n43 g\nSugars\n18 g\nBudget\n€5.80 / €10.00"}
+{"level":30,"time":"2026-05-08T21:19:24.262Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:24.271Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:24.274Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:24.281Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:24.283Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:24.289Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method click"}
+{"level":30,"time":"2026-05-08T21:19:24.290Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with role=link[name=\"Tracker\"] in page."}
+{"level":30,"time":"2026-05-08T21:19:24.340Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method click"}
+{"level":30,"time":"2026-05-08T21:19:24.346Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:24.346Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with role=heading[name=\"Tracker\"] in page."}
+{"level":30,"time":"2026-05-08T21:19:24.351Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:24.358Z","pid":33132,"hostname":"BhaviKataria","msg":"Reload page with options: {\"waitUntil\": \"load\"}"}
+{"level":30,"time":"2026-05-08T21:19:24.439Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:24.439Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with role=heading[name=\"Tracker\"] in page."}
+{"level":30,"time":"2026-05-08T21:19:24.493Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-05-08T21:19:24.500Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:24.500Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with body in page."}
+{"level":30,"time":"2026-05-08T21:19:24.529Z","pid":33132,"hostname":"BhaviKataria","msg":"Retrieved text for element body containing Meal Tracker\nRecipes\nProducts\nTracker\nSettings\nTracker\n\nSimple daily dashboard placeholder.\n\nAdd Meal\nCalories\n1,420 / 2,100 kcal\nProtein\n82 / 120 g\nFiber\n21 / 30 g\nFat\n43 g\nSugars\n18 g\nBudget\n€5.80 / €10.00"}
+{"level":30,"time":"2026-05-08T21:19:24.529Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:24.535Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:24.535Z","pid":33132,"hostname":"BhaviKataria","msg":"Strict mode is enabled, find Locator with body in page."}
+{"level":30,"time":"2026-05-08T21:19:24.552Z","pid":33132,"hostname":"BhaviKataria","msg":"Retrieved text for element body containing Meal Tracker\nRecipes\nProducts\nTracker\nSettings\nTracker\n\nSimple daily dashboard placeholder.\n\nAdd Meal\nCalories\n1,420 / 2,100 kcal\nProtein\n82 / 120 g\nFiber\n21 / 30 g\nFat\n43 g\nSugars\n18 g\nBudget\n€5.80 / €10.00"}
+{"level":30,"time":"2026-05-08T21:19:24.552Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getText"}
+{"level":30,"time":"2026-05-08T21:19:24.560Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:24.563Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:24.569Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2026-05-08T21:19:24.592Z","pid":33132,"hostname":"BhaviKataria","msg":"Removed page=edcd0a15-01cf-4994-97dc-b562e1f34c36 from context=3c402cec-95e1-4533-8aef-5cb0ea30b0eb page stack"}
+{"level":30,"time":"2026-05-08T21:19:25.009Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\Bhavi Kataria\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:8777:13)
+    at PlaywrightServer.getActiveBrowser (C:\Users\Bhavi Kataria\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:9689:52)
+    at PlaywrightServer.setTimeout (C:\Users\Bhavi Kataria\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js:9887:56)
+    at Object.onReceiveHalfClose (C:\Users\Bhavi Kataria\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\Bhavi Kataria\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\Bhavi Kataria\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\Bhavi Kataria\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2026-05-08T21:19:25.017Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:25.017Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-08T21:19:25.089Z","pid":33132,"hostname":"BhaviKataria","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2026-05-08T21:19:25.090Z","pid":33132,"hostname":"BhaviKataria","msg":"End of node method closeAllBrowsers"}
