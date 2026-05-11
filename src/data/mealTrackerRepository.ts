@@ -67,3 +67,25 @@ export async function createIngredient(
 
   return response.json();
 }
+
+export async function createRecipe(
+  recipe: {
+    name: string;
+    description?: string;
+    image_url?: string;
+  }
+): Promise<Recipe> {
+  const response = await fetch(`${API_BASE_URL}/recipes`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(recipe),
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to create recipe");
+  }
+
+  return response.json();
+}

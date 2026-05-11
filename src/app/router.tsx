@@ -8,6 +8,7 @@ import { TrackerPage } from "@/features/tracker/TrackerPage";
 import { SettingsPage } from "@/features/settings/SettingsPage";
 import { CreateProduct } from "@/features/products/CreateProduct";
 import { ProductDetailsPage } from "@/features/products/ProductDetailsPage";
+import { CreateRecipePage } from "@/features/recipes/CreateRecipe";
 
 export const router = createBrowserRouter([
   {
@@ -21,7 +22,8 @@ export const router = createBrowserRouter([
       { path: "tracker", element: <TrackerPage /> },
       { path: "settings", element: <SettingsPage /> },
       { path: "products/create", element: <CreateProduct /> },
-      { path: "products/:id", element: <ProductDetailsPage /> }
+      { path: "products/:id", element: <ProductDetailsPage /> },
+      { path: "recipes/create", element: <CreateRecipePage /> }
     ],
   },
 ]);

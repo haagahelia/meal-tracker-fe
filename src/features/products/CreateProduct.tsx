@@ -12,22 +12,13 @@ import { IngredientUnit } from "@/domain/mealTrackerTypes";
 type FormState = {
     name: string;
     unit: IngredientUnit;
-    calories_per_100: number;
-    protein_per_100: number;
-    fiber_per_100: number;
-    sugar_per_100: number;
-    fat_per_100: number;
-    salt_per_100: number;
+    calories_per_100: string;
+    protein_per_100: string;
+    fiber_per_100: string;
+    sugar_per_100: string;
+    fat_per_100: string;
+    salt_per_100: string;
 };
-
-const numberFields: (keyof Omit<FormState, "name" | "unit">)[] = [
-    "calories_per_100",
-    "protein_per_100",
-    "fiber_per_100",
-    "sugar_per_100",
-    "fat_per_100",
-    "salt_per_100",
-];
 
 export function CreateProduct() {
     const navigate = useNavigate();
@@ -38,12 +29,12 @@ export function CreateProduct() {
     const [form, setForm] = useState<FormState>({
         name: "",
         unit: "g",
-        calories_per_100: 0,
-        protein_per_100: 0,
-        fiber_per_100: 0,
-        sugar_per_100: 0,
-        fat_per_100: 0,
-        salt_per_100: 0,
+        calories_per_100: "",
+        protein_per_100: "",
+        fiber_per_100: "",
+        sugar_per_100: "",
+        fat_per_100: "",
+        salt_per_100: "",
     });
 
     function handleChange(
@@ -51,26 +42,10 @@ export function CreateProduct() {
     ) {
         const { name, value } = e.target;
 
-        setForm((prev) => {
-            if (name === "unit") {
-                return {
-                    ...prev,
-                    unit: value as IngredientUnit,
-                };
-            }
-
-            if (numberFields.includes(name as any)) {
-                return {
-                    ...prev,
-                    [name]: value === "" ? 0 : Number(value),
-                };
-            }
-
-            return {
-                ...prev,
-                [name]: value,
-            };
-        });
+        setForm((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
     }
 
     async function handleSubmit(e: React.FormEvent) {
@@ -80,7 +55,16 @@ export function CreateProduct() {
             setLoading(true);
             setError(null);
 
-            await createIngredient(form);
+            await createIngredient({
+                name: form.name,
+                unit: form.unit,
+                calories_per_100: Number(form.calories_per_100),
+                protein_per_100: Number(form.protein_per_100),
+                fiber_per_100: Number(form.fiber_per_100),
+                sugar_per_100: Number(form.sugar_per_100),
+                fat_per_100: Number(form.fat_per_100),
+                salt_per_100: Number(form.salt_per_100),
+            });
 
             navigate("/products");
         } catch (err) {
@@ -126,7 +110,7 @@ export function CreateProduct() {
                         <Input
                             name="calories_per_100"
                             type="number"
-                            placeholder="Calories"
+                            placeholder="Calories per 100"
                             value={form.calories_per_100}
                             onChange={handleChange}
                         />
@@ -134,7 +118,7 @@ export function CreateProduct() {
                         <Input
                             name="protein_per_100"
                             type="number"
-                            placeholder="Protein"
+                            placeholder="Protein per 100"
                             value={form.protein_per_100}
                             onChange={handleChange}
                         />
@@ -142,7 +126,7 @@ export function CreateProduct() {
                         <Input
                             name="fiber_per_100"
                             type="number"
-                            placeholder="Fiber"
+                            placeholder="Fiber per 100"
                             value={form.fiber_per_100}
                             onChange={handleChange}
                         />
@@ -150,7 +134,7 @@ export function CreateProduct() {
                         <Input
                             name="sugar_per_100"
                             type="number"
-                            placeholder="Sugar"
+                            placeholder="Sugar per 100"
                             value={form.sugar_per_100}
                             onChange={handleChange}
                         />
@@ -158,7 +142,7 @@ export function CreateProduct() {
                         <Input
                             name="fat_per_100"
                             type="number"
-                            placeholder="Fat"
+                            placeholder="Fat per 100"
                             value={form.fat_per_100}
                             onChange={handleChange}
                         />
@@ -166,7 +150,7 @@ export function CreateProduct() {
                         <Input
                             name="salt_per_100"
                             type="number"
-                            placeholder="Salt"
+                            placeholder="Salt per 100"
                             value={form.salt_per_100}
                             onChange={handleChange}
                         />
