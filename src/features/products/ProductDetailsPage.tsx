@@ -1,34 +1,62 @@
 import { useEffect, useState } from "react";
 import { getIngredientById } from "@/data/mealTrackerRepository";
 import type { Ingredient } from "@/domain/mealTrackerTypes";
+
 import { Link, useParams } from "react-router-dom";
 import { Page } from "@/components/ui/Page";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 
-
-
 export function ProductDetailsPage() {
     const { id } = useParams();
+
     const [product, setProduct] = useState<Ingredient | undefined>();
     const [form, setForm] = useState<Ingredient | undefined>();
     const [isEditing, setIsEditing] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        if (!id) return;
+        async function load() {
+            if (!id) return;
 
-        getIngredientById(Number(id)).then((ingredient) => {
-            setProduct(ingredient);
-            setForm(ingredient);
-        });
+            try {
+                setLoading(true);
+
+                const ingredient = await getIngredientById(Number(id));
+
+                setProduct(ingredient);
+                setForm(ingredient);
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        load();
     }, [id]);
+
+    // LOADING STATE
+    if (loading) {
+        return (
+            <Page title="Loading..." description="">
+                <Card className="text-sm text-slate-500">
+                    Loading product...
+                </Card>
+            </Page>
+        );
+    }
+
+    // NOT FOUND STATE (only after loading is finished)
     if (!product || !form) {
         return (
-            <Page title="Product not found" description="No product matched this route parameter.">
+            <Page
+                title="Product not found"
+                description="No product matched this route parameter."
+            >
                 <Card className="space-y-3">
                     <p className="text-sm text-slate-600">
                         Try going back to the product list.
                     </p>
+
                     <Link to="/products" className="text-sm font-medium underline">
                         Back to products
                     </Link>
@@ -42,7 +70,8 @@ export function ProductDetailsPage() {
 
         setForm({
             ...form,
-            [name]: name === "name" || name === "unit" ? value : Number(value),
+            [name]:
+                name === "name" || name === "unit" ? value : Number(value),
         });
     };
 
@@ -60,7 +89,6 @@ export function ProductDetailsPage() {
             }
         >
             <div className="grid grid-cols-1 gap-4 md:grid-cols-[1.5fr_1fr]">
-
                 {/* LEFT: Nutrition */}
                 <Card className="space-y-3">
                     <h2 className="text-base font-semibold">
@@ -104,7 +132,6 @@ export function ProductDetailsPage() {
                     <h2 className="text-base font-semibold">Summary</h2>
 
                     <div className="space-y-2 text-sm text-slate-700">
-
                         <div className="flex justify-between">
                             <span>Product name</span>
 
@@ -145,7 +172,6 @@ export function ProductDetailsPage() {
 
             {/* ACTIONS */}
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-end">
-
                 {isEditing ? (
                     <>
                         <Button
@@ -162,6 +188,7 @@ export function ProductDetailsPage() {
                             variant="primary"
                             onClick={() => {
                                 console.log("Saved:", form);
+                                setProduct(form);
                                 setIsEditing(false);
                             }}
                         >
@@ -185,7 +212,6 @@ export function ProductDetailsPage() {
                         </Button>
                     </>
                 )}
-
             </div>
         </Page>
     );

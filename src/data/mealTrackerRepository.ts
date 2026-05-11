@@ -49,3 +49,21 @@ export async function getRecipeIngredients(recipeId: number) {
 
   return response.json();
 }
+
+export async function createIngredient(
+  ingredient: Omit<Ingredient, "id">
+): Promise<Ingredient> {
+  const response = await fetch(`${API_BASE_URL}/ingredients`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(ingredient),
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to create ingredient");
+  }
+
+  return response.json();
+}
