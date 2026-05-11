@@ -1,10 +1,8 @@
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState } from "react";
 import { getRecipeDetails } from "@/data/mealTrackerRepository";
 import { Link, useParams } from "react-router-dom";
 import { Page } from "@/components/ui/Page";
 import { Card } from "@/components/ui/Card";
-
-
 
 export function RecipeDetailsPage() {
   const { id } = useParams();
@@ -18,7 +16,10 @@ export function RecipeDetailsPage() {
 
   if (!recipe) {
     return (
-      <Page title="Recipe not found" description="No recipe matched this route parameter.">
+      <Page
+        title="Recipe not found"
+        description="No recipe matched this route parameter."
+      >
         <Card className="space-y-3">
           <p className="text-sm text-slate-600">
             Try going back to the recipe list.
