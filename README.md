@@ -28,6 +28,20 @@ This project is a React + Vite frontend application with Docker support for deve
 
 ## 🚀 Getting Started
 
+### Database connection via Siba_be
+
+For now, the Siba_be has a sidecar, that is providing the data for this project.  
+Follow these steps:
+
+```bash
+git clone https://github.com/haagahelia/Siba_be.git
+cd Siba_be
+git checkout mealtracker-sidecar
+docker compose -f docker-compose-mealtracker.yaml up --build -d
+```
+
+Then continue with steps as usual:
+
 ### 1. Clone the Repository
 
 ```bash

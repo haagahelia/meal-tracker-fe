@@ -1,51 +1,51 @@
-import {
-  ingredients,
-  recipes,
-  recipeIngredients,
-} from "@/data/seed/mealTrackerSeed";
+import type { Ingredient, Recipe } from "@/domain/mealTrackerTypes";
 
-export async function getIngredients() {
-  return ingredients;
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL ?? "http://localhost:4678/api/mealtracker";
+
+export async function getIngredients(): Promise<Ingredient[]> {
+  const response = await fetch(`${API_BASE_URL}/ingredients`);
+  if (!response.ok) throw new Error("Failed to fetch ingredients");
+  return response.json();
 }
 
-export async function getIngredientById(id: number) {
-  return ingredients.find((ingredient) => ingredient.id === id);
+export async function getIngredientById(id: number): Promise<Ingredient | undefined> {
+  const response = await fetch(`${API_BASE_URL}/ingredients/${id}`);
+
+  if (response.status === 404) return undefined;
+  if (!response.ok) throw new Error("Failed to fetch ingredient");
+
+  return response.json();
 }
 
-export async function getRecipes() {
-  return recipes;
+export async function getRecipes(): Promise<Recipe[]> {
+  const response = await fetch(`${API_BASE_URL}/recipes`);
+  if (!response.ok) throw new Error("Failed to fetch recipes");
+  return response.json();
 }
 
-export async function getRecipeById(id: number) {
-  return recipes.find((recipe) => recipe.id === id);
+export async function getRecipeById(id: number): Promise<Recipe | undefined> {
+  const response = await fetch(`${API_BASE_URL}/recipes/${id}`);
+
+  if (response.status === 404) return undefined;
+  if (!response.ok) throw new Error("Failed to fetch recipe");
+
+  return response.json();
 }
 
 export async function getRecipeDetails(id: number) {
-  const recipe = recipes.find((recipe) => recipe.id === id);
+  const response = await fetch(`${API_BASE_URL}/recipes/${id}/details`);
 
-  if (!recipe) return undefined;
+  if (response.status === 404) return undefined;
+  if (!response.ok) throw new Error("Failed to fetch recipe details");
 
-  const ingredientRows = recipeIngredients.filter(
-    (row) => row.recipe_id === id
-  );
-
-  return {
-    ...recipe,
-    ingredients: ingredientRows.map((row) => {
-      const ingredient = ingredients.find(
-        (item) => item.id === row.ingredient_id
-      );
-
-      return {
-        ...row,
-        ingredient,
-      };
-    }),
-  };
+  return response.json();
 }
 
-/*
-Later:
-const response = await fetch("/api/ingredients");
-return response.json();
-*/
+export async function getRecipeIngredients(recipeId: number) {
+  const response = await fetch(`${API_BASE_URL}/recipeingredients/${recipeId}`);
+
+  if (!response.ok) throw new Error("Failed to fetch recipe ingredients");
+
+  return response.json();
+}
