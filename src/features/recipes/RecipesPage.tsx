@@ -8,38 +8,90 @@ import { Button } from "@/components/ui/Button";
 
 export function RecipesPage() {
   const [recipes, setRecipes] = useState<Recipe[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    getRecipes().then(setRecipes);
+    let isMounted = true;
+
+    async function loadRecipes() {
+      try {
+        setLoading(true);
+        const data = await getRecipes();
+
+        if (isMounted) {
+          setRecipes(data);
+        }
+      } catch (err) {
+        if (isMounted) {
+          setError("Failed to load recipes");
+        }
+      } finally {
+        if (isMounted) {
+          setLoading(false);
+        }
+      }
+    }
+
+    loadRecipes();
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   return (
     <Page
       title="Recipes"
-      description="Example recipe list with dynamic route support."
+      description="View all your recipes."
       actions={
-        <Button variant="primary" className="rounded-xl border border-slate-300 px-4 py-2 text-sm font-medium text-white hover:bg-slate-700">
-          Add recipe
-        </Button>
+        <Link to="/recipes/create">
+          <Button className="rounded-xl px-4 py-2 text-sm font-medium">
+            Add recipe
+          </Button>
+        </Link>
       }
     >
-      <div className="space-y-3">
-        {recipes.map((recipe) => (
-          <Card key={recipe.id} className="flex items-center justify-between gap-4">
-            <div>
-              <h2 className="text-base font-semibold">{recipe.name}</h2>
-              <p className="text-sm text-slate-600">{recipe.description}</p>
-            </div>
+      {loading && (
+        <Card className="text-sm text-slate-500">
+          Loading recipes...
+        </Card>
+      )}
 
-            <Link
-              to={`/recipes/${recipe.id}`}
-              className="rounded-xl bg-slate-900 px-3 py-2 text-sm font-medium text-white hover:bg-slate-800"
-            >
-              Open
-            </Link>
-          </Card>
-        ))}
-      </div>
+      {error && (
+        <Card className="text-sm text-red-500">
+          {error}
+        </Card>
+      )}
+
+      {!loading && !error && (
+        <div className="grid gap-3">
+          {recipes.length === 0 ? (
+            <p className="text-sm text-slate-500">No recipes found.</p>
+          ) : (
+            recipes.map((recipe) => (
+              <Card
+                key={recipe.id}
+                className="flex items-center justify-between gap-4 p-4"
+              >
+                <div>
+                  <h2 className="text-base font-semibold">{recipe.name}</h2>
+                  <p className="text-sm text-slate-600">
+                    {recipe.description}
+                  </p>
+                </div>
+
+                <Link
+                  to={`/recipes/${recipe.id}`}
+                  className="rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800"
+                >
+                  Open
+                </Link>
+              </Card>
+            ))
+          )}
+        </div>
+      )}
     </Page>
   );
 }

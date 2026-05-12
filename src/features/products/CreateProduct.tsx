@@ -1,13 +1,32 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Page } from "@/components/ui/Page";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Select } from "@/components/ui/Select";
 
+import { createIngredient } from "@/data/mealTrackerRepository";
+import { IngredientUnit } from "@/domain/mealTrackerTypes";
+
+type FormState = {
+    name: string;
+    unit: IngredientUnit;
+    calories_per_100: string;
+    protein_per_100: string;
+    fiber_per_100: string;
+    sugar_per_100: string;
+    fat_per_100: string;
+    salt_per_100: string;
+};
+
 export function CreateProduct() {
-    const [form, setForm] = useState({
+    const navigate = useNavigate();
+
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
+
+    const [form, setForm] = useState<FormState>({
         name: "",
         unit: "g",
         calories_per_100: "",
@@ -18,29 +37,47 @@ export function CreateProduct() {
         salt_per_100: "",
     });
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-        setForm({
-            ...form,
-            [e.target.name]: e.target.value,
-        });
-    };
+    function handleChange(
+        e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    ) {
+        const { name, value } = e.target;
 
-    const handleSubmit = (e: React.FormEvent) => {
+        setForm((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
+    }
+
+    async function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
 
-        console.log("Ingredient created:", form);
+        try {
+            setLoading(true);
+            setError(null);
 
-        // later:
-        // fetch("/api/ingredients", {
-        //   method: "POST",
-        //   headers: { "Content-Type": "application/json" },
-        //   body: JSON.stringify(form),
-        // });
-    };
+            await createIngredient({
+                name: form.name,
+                unit: form.unit,
+                calories_per_100: Number(form.calories_per_100),
+                protein_per_100: Number(form.protein_per_100),
+                fiber_per_100: Number(form.fiber_per_100),
+                sugar_per_100: Number(form.sugar_per_100),
+                fat_per_100: Number(form.fat_per_100),
+                salt_per_100: Number(form.salt_per_100),
+            });
+
+            navigate("/products");
+        } catch (err) {
+            setError("Failed to create ingredient");
+        } finally {
+            setLoading(false);
+        }
+    }
+
     return (
         <Page
             title="Create Product"
-            description="Create a new product."
+            description="Add a new ingredient to your database"
             actions={
                 <Link
                     to="/products"
@@ -50,24 +87,21 @@ export function CreateProduct() {
                 </Link>
             }
         >
-            {/* CREATE PRODUCT (INGREDIENT) FORM */}
             <div className="mt-6">
                 <Card>
-                    <h2 className="text-base font-semibold">Create Product</h2>
+                    <h2 className="text-base font-semibold">New Ingredient</h2>
+
+                    {error && <p className="mt-2 text-sm text-red-500">{error}</p>}
 
                     <form onSubmit={handleSubmit} className="mt-4 space-y-4">
                         <Input
                             name="name"
-                            placeholder="Product name"
+                            placeholder="Name"
                             value={form.name}
                             onChange={handleChange}
                         />
 
-                        <Select
-                            name="unit"
-                            value={form.unit}
-                            onChange={handleChange}
-                        >
+                        <Select name="unit" value={form.unit} onChange={handleChange}>
                             <option value="g">g</option>
                             <option value="ml">ml</option>
                             <option value="pcs">pcs</option>
@@ -121,9 +155,9 @@ export function CreateProduct() {
                             onChange={handleChange}
                         />
 
-                        <div className="flex flex-col md:flex-row md:justify-end">
-                            <Button type="submit" className="w-full md:w-auto">
-                                Create Product
+                        <div className="flex justify-end">
+                            <Button type="submit" disabled={loading}>
+                                {loading ? "Creating..." : "Create Product"}
                             </Button>
                         </div>
                     </form>
