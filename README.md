@@ -122,6 +122,25 @@ docker run -p 80:80 meal-tracker
 
 👉 [http://localhost](http://localhost)
 
+### Local Deployment (Without Docker):
+
+If you prefer to deploy locally without Docker for testing the production build:
+
+1. Build the project:
+   ```bash
+   npm run build
+   ```
+
+2. Serve the built app locally:
+   ```bash
+   npm run preview
+   ```
+
+   - This starts a local server serving the `dist` folder with SPA routing support.
+   - Access at: 👉 [http://localhost:4173](http://localhost:4173)
+
+This is useful for verifying the production build before deploying to a server or container.
+
 ---
 
 ## 📦 Project Structure
@@ -152,3 +171,5 @@ docker run -p 80:80 meal-tracker
 ## 📄 License
 
 This project is private and intended for educational or internal use.
+
+---
