@@ -7,6 +7,7 @@ import {
   getRecipeById,
   getRecipeIngredients,
   getIngredientById,
+  getRecipeDetails,
 } from "@/data/mealTrackerRepository";
 
 type EnrichedIngredientRow = {
